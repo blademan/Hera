@@ -53,6 +53,7 @@ h5 {
 
 p {
 	margin: 0 0 10px 0;
+    padding: 0px 10px;
 }
 
 p.lead {
@@ -183,7 +184,15 @@ header nav ul li a:hover {
 }
 .box {
   
+ display: -webkit-box;
+  
+ display: -ms-flexbox;
+  
  display: flex;
+  
+  -webkit-box-pack: justify;
+  
+  -ms-flex-pack: justify;
   
   justify-content: space-between;
   width: 100%;
@@ -278,7 +287,6 @@ list-style: none;
 
 .btn:active {
 	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-	   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
 	        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
 	color: #777;
 }
@@ -293,7 +301,8 @@ list-style: none;
 	padding-top: 400px; /*That helps bring the labels down*/
 	padding-bottom : 0px; 
 	margin: 100px auto;
-	
+	-webkit-box-shadow: 0 10px 20px rgba(black, .5);
+	box-shadow: 0 10px 20px rgba(black, .5);
 	/*Lets add a shadow*/
 	
 }
@@ -303,6 +312,7 @@ list-style: none;
 .slider>img{
 	position: absolute;
 	left: 0; top: 0;
+	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
 
@@ -317,6 +327,7 @@ list-style: none;
 	
 	float: left;
 	cursor: pointer;
+	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 	
 	/*Default style = low opacity*/
@@ -336,6 +347,7 @@ list-style: none;
 /*Time to work on the main images*/
 .slider input[name='slide_switch'] ~ img {
 	opacity: 0;
+	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 }
 /*That hides all main images at a 110% size
@@ -343,5 +355,6 @@ On click the images will be displayed at normal size to complete the effect
 */
 .slider input[name='slide_switch']:checked+label+img {
 	opacity: 1;
+	-webkit-transform: scale(1);
 	transform: scale(1);
 }
